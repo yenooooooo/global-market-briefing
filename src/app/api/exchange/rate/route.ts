@@ -31,6 +31,14 @@ const TARGET_CURRENCIES = ['USD', 'INR', 'PLN', 'CNY', 'JPY', 'EUR', 'VND']
  */
 export async function GET(request: Request) {
   try {
+    /* ── 인증 확인 — 로그인된 사용자만 환율 조회 가능 ── */
+    const { createClient } = await import('@/lib/supabase/server')
+    const supabase = await createClient()
+    const { data: { user } } = await supabase.auth.getUser()
+    if (!user) {
+      return NextResponse.json({ message: '로그인이 필요합니다.' }, { status: 401 })
+    }
+
     const { searchParams } = new URL(request.url)
     const forceRefresh = searchParams.get('refresh') === 'true'
 
