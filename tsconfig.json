@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    /* ── TypeScript 6.x 호환 설정 ── */
+    "ignoreDeprecations": "6.0",           // baseUrl 등 deprecated 옵션 경고 무시
+
+    /* ── 기본 설정 ── */
+    "target": "ES2017",                    // ES2017 타겟으로 async/await 네이티브 지원
+    "lib": ["dom", "dom.iterable", "esnext"], // 브라우저 + 최신 JS API 타입 포함
+    "allowJs": true,                       // JS 파일도 함께 사용 가능
+    "skipLibCheck": true,                  // node_modules 타입 체크 스킵 (빌드 속도 향상)
+
+    /* ── TypeScript Strict 모드 ── */
+    "strict": true,                        // 엄격한 타입 체크 활성화 (CLAUDE.md 규칙)
+    "noEmit": true,                        // Next.js가 빌드를 담당하므로 tsc는 타입 체크만
+
+    /* ── 모듈 시스템 ── */
+    "esModuleInterop": true,               // CommonJS/ESM 호환성
+    "module": "esnext",                    // ESM 모듈 시스템 사용
+    "moduleResolution": "bundler",         // Next.js 번들러 기반 모듈 해석
+    "resolveJsonModule": true,             // JSON 파일 import 허용
+    "isolatedModules": true,               // 파일 단위 트랜스파일 보장
+
+    /* ── JSX ── */
+    "jsx": "preserve",                     // Next.js가 JSX 변환을 처리
+
+    /* ── 기타 ── */
+    "incremental": true,                   // 증분 컴파일로 빌드 속도 향상
+
+    /* ── import 경로 별칭 ── */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]                   // @/ → src/ 매핑 (절대 경로 import)
+    },
+
+    /* ── Next.js 플러그인 ── */
+    "plugins": [
+      { "name": "next" }                   // Next.js TypeScript 플러그인
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm --no-git)",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm --no-git 2)",
+      "Bash(1:*)",
+      "Read(//c/Users/ailee/github/**)",
+      "Bash(npx create-next-app@latest global-market-briefing-temp --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm --no-git)",
+      "Bash(rm -rf \"C:/Users/ailee/github/global-market-briefing-temp\")",
+      "Bash(npm init:*)",
+      "Bash(npm pkg:*)",
+      "Bash(npm install:*)",
+      "Bash(npm ls:*)",
+      "Bash(cd:*)",
+      "Bash(npm run:*)",
+      "Bash(wc:*)",
+      "Bash(netsh interface:*)",
+      "Bash(rm:*)",
+      "Bash(npx next:*)",
+      "Bash(curl:*)",
+      "Bash(mv \"Gemini_Generated_Image_liu9h5liu9h5liu9.png\" \"hero-office.png\")",
+      "Bash(mv \"Gemini_Generated_Image_liu9h5liu9h5liu9 \\(2\\).png\" \"bento-dashboard.png\")",
+      "Bash(mv \"Gemini_Generated_Image_liu9h5liu9h5liu9 \\(3\\).png\" \"bento-ai.png\")",
+      "Bash(mv \"Gemini_Generated_Image_liu9h5liu9h5liu9 \\(4\\).png\" \"bento-exchange.png\")",
+      "Bash(mv \"Gemini_Generated_Image_liu9h5liu9h5liu9 \\(5\\).png\" \"cta-background.png\")",
+      "Bash(identify bento-dashboard.png bento-ai.png bento-exchange.png)",
+      "Bash(mv bento-dashboard.png bento-dashboard-old.png)",
+      "Bash(cp \"매출현황.png\" bento-dashboard.png)",
+      "Bash(python:*)"
+    ]
+  }
+}
