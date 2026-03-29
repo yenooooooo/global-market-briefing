@@ -21,6 +21,17 @@ export const metadata: Metadata = {
   description:
     '7개국 해외 법인의 매출 데이터를 시각화하고, AI가 주간 경영 브리핑을 자동 생성하는 대시보드',
   keywords: ['글로벌', '매출 분석', 'AI 브리핑', '해외 법인', '경영 대시보드'],
+  openGraph: {
+    title: '글로벌 마켓 브리핑',
+    description: '해외 7개국 법인 매출 시각화 + AI 주간 경영 브리핑 자동 생성 대시보드',
+    type: 'website',
+    locale: 'ko_KR',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: '글로벌 마켓 브리핑',
+    description: '해외 7개국 법인 매출 시각화 + AI 주간 경영 브리핑 자동 생성 대시보드',
+  },
 }
 
 /**

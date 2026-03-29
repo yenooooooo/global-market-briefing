@@ -69,25 +69,41 @@ export default function LandingPage() {
               </div>
             </div>
 
-            {/* 우측 5컬럼: 오피스 이미지 + 플로팅 KPI 카드 (stitch 7 동일 구조) */}
-            <div className="lg:col-span-5 relative hidden lg:block">
-              {/* 메인 이미지 — 4:5 비율, stitch 7 히어로 이미지 동일 */}
-              <div className="aspect-[4/5] w-full rounded-2xl overflow-hidden shadow-2xl">
-                <Image
-                  src="/images/hero-office.png"
-                  alt="데이터 대시보드가 표시된 현대적 오피스"
-                  width={800}
-                  height={1000}
-                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                  priority
-                />
+            {/* 우측 5컬럼 */}
+            <div className="lg:col-span-5">
+              {/* ── 데스크톱: 오피스 이미지 + 플로팅 배지 ── */}
+              <div className="relative hidden lg:block">
+                <div className="aspect-[4/5] w-full rounded-2xl overflow-hidden shadow-2xl">
+                  <Image
+                    src="/images/hero-office.png"
+                    alt="데이터 대시보드가 표시된 현대적 오피스"
+                    width={800}
+                    height={1000}
+                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                    priority
+                  />
+                </div>
+                <div className="absolute -bottom-8 -left-8 p-6 glass-morphism rounded-xl border border-outline/10 max-w-xs shadow-2xl">
+                  <div className="text-primary font-headline font-bold text-4xl mb-1">7개국</div>
+                  <div className="text-on-surface-variant text-sm font-medium tracking-wide">
+                    해외 법인 매출 데이터를 실시간 모니터링하고 AI가 분석합니다.
+                  </div>
+                </div>
               </div>
 
-              {/* 플로팅 KPI 카드 — glassmorphism (stitch 7 동일) */}
-              <div className="absolute -bottom-8 -left-8 p-6 glass-morphism rounded-xl border border-outline/10 max-w-xs shadow-2xl">
-                <div className="text-primary font-headline font-bold text-4xl mb-1">7개국</div>
-                <div className="text-on-surface-variant text-sm font-medium tracking-wide">
-                  해외 법인 매출 데이터를 실시간 모니터링하고 AI가 분석합니다.
+              {/* ── 모바일: 핵심 수치 카드 3개 가로 배치 ── */}
+              <div className="grid grid-cols-3 gap-3 lg:hidden">
+                <div className="rounded-xl bg-surface-container-low p-4 text-center">
+                  <p className="font-headline text-2xl font-black text-primary">7개국</p>
+                  <p className="text-[10px] text-on-surface-variant mt-1">해외 법인</p>
+                </div>
+                <div className="rounded-xl bg-surface-container-low p-4 text-center">
+                  <p className="font-headline text-2xl font-black text-white">AI</p>
+                  <p className="text-[10px] text-on-surface-variant mt-1">자동 브리핑</p>
+                </div>
+                <div className="rounded-xl bg-surface-container-low p-4 text-center">
+                  <p className="font-headline text-2xl font-black text-success">5분</p>
+                  <p className="text-[10px] text-on-surface-variant mt-1">보고서 완성</p>
                 </div>
               </div>
             </div>
