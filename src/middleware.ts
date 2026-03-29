@@ -72,6 +72,9 @@ export async function middleware(request: NextRequest) {
   /* ── 경로 기반 접근 제어 ── */
   const { pathname } = request.nextUrl
 
+  // /demo 경로는 인증 체크 제외 (포트폴리오 시연용)
+  if (pathname.startsWith('/demo')) return supabaseResponse
+
   // 대시보드 경로 목록 (로그인 필요)
   const protectedPaths = ['/home', '/sales', '/exchange', '/briefing', '/competitors', '/settings']
   const isProtectedPath = protectedPaths.some((path) => pathname.startsWith(path))

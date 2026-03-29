@@ -32,8 +32,8 @@ export default function LandingPage() {
             <a className="font-headline font-bold text-sm tracking-tight text-white/70 hover:text-white transition-colors duration-200" href="#features">기능</a>
             <a className="font-headline font-bold text-sm tracking-tight text-white/70 hover:text-white transition-colors duration-200" href="#showcase">미리보기</a>
           </div>
-          <Link href="/login" className="bg-gradient-to-r from-primary to-primary-container text-on-primary px-7 py-2.5 rounded-full font-headline font-bold text-sm hover:scale-105 transition-all duration-200 active:scale-95">
-            시작하기
+          <Link href="/demo" className="bg-gradient-to-r from-primary to-primary-container text-on-primary px-7 py-2.5 rounded-full font-headline font-bold text-sm hover:scale-105 transition-all duration-200 active:scale-95">
+            데모 체험
           </Link>
         </div>
       </nav>
@@ -59,13 +59,13 @@ export default function LandingPage() {
               </p>
 
               <div className="flex flex-wrap gap-4">
-                <Link href="/signup" className="bg-gradient-to-r from-primary to-primary-container text-on-primary px-10 py-4 rounded-full font-headline font-bold text-base hover:scale-105 transition-all duration-200 shadow-xl shadow-primary/20">
-                  무료로 시작하기
+                <Link href="/demo" className="bg-gradient-to-r from-primary to-primary-container text-on-primary px-10 py-4 rounded-full font-headline font-bold text-base hover:scale-105 transition-all duration-200 shadow-xl shadow-primary/20">
+                  데모 체험하기
                 </Link>
-                <a href="#compare" className="group flex items-center gap-3 px-7 py-4 rounded-full border border-outline/15 hover:bg-surface-bright transition-colors duration-200">
-                  <span className="font-headline font-bold text-base">자세히 보기</span>
+                <Link href="/signup" className="group flex items-center gap-3 px-7 py-4 rounded-full border border-outline/15 hover:bg-surface-bright transition-colors duration-200">
+                  <span className="font-headline font-bold text-base">시작하기</span>
                   <span className="group-hover:translate-x-1 transition-transform">→</span>
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -312,14 +312,14 @@ export default function LandingPage() {
                 데이터를 올리면 분석부터 보고서까지 AI가 자동으로 완성합니다.
               </p>
 
-              <Link href="/signup" className="inline-flex items-center gap-5 group relative z-10">
-                <span className="text-3xl md:text-5xl font-headline font-bold text-primary border-b-4 border-primary/20 pb-1 group-hover:border-primary transition-all duration-300">
-                  무료로 시작하기
-                </span>
-                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-primary flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-all duration-300 shrink-0">
-                  <span className="text-3xl">→</span>
-                </div>
-              </Link>
+              <div className="relative z-10 flex flex-col sm:flex-row items-center gap-6">
+                <Link href="/demo" className="bg-gradient-to-r from-primary to-primary-container text-on-primary px-12 py-5 rounded-full font-headline font-bold text-lg hover:scale-105 transition-all duration-200 shadow-xl shadow-primary/20">
+                  데모 체험하기
+                </Link>
+                <Link href="/signup" className="font-headline font-bold text-lg text-on-surface-variant hover:text-primary transition-colors">
+                  또는 회원가입 →
+                </Link>
+              </div>
             </div>
           </div>
         </section>
